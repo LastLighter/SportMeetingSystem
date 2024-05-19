@@ -9,7 +9,7 @@ let pageLength = 5
 let totalPage = 0
 
 let pages = ref<PageItem[]>([])
-let updatePage = (page: number) => {
+let updatePage = (page: number) => { 
     buildPages()
     emits('pageUpdate', page)
 }

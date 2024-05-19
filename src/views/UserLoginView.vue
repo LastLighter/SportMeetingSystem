@@ -159,7 +159,7 @@ load()
     position: absolute;
     left: 40vw;
     top: 200px;
-    background-color: #B97A57;
+    background-color: #99D9EA;
     width: 500px;
     display: flex;
     align-items: center;

@@ -5,7 +5,7 @@ export interface Manage{
     phone:string,
     username:string,
     password:string|null,
-    avatar:string,
+    avatar:string|null,
 }
 
 export interface LoginData{

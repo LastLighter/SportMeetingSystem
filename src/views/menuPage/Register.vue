@@ -9,6 +9,7 @@ import type { EleOptions } from '@/api/component/type'
 import { getAllSports } from '@/api/sports';
 import type { SportDto } from '@/api/sports/type';
 import type { PageInfo } from "@/api/common/type";
+import PageSelector from '@/components/PageSelector.vue';
 
 const PageSize = 10
 let data: {
@@ -132,9 +133,9 @@ let searchByUserOrSportName =async () => {
 
 let pageUpdate = (pageNum:number) => {
     data.curPage = pageNum
-    if(data.curPage == 0){
+    if(data.pageStatus == 0){
         load()
-    }else if(data.curPage == 1){
+    }else if(data.pageStatus == 1){
         data.tableData = []
         data.tableData.push(...data.tempSearchData.slice((data.curPage - 1)*PageSize,data.curPage*PageSize))
     }
@@ -171,7 +172,7 @@ let pageUpdate = (pageNum:number) => {
             </el-table>
         </div>
         <div class="page-selector">
-            <PageSelector :page="data.curPage" :pageSize="PageSize" :total="data.totalSize" :pageUpdate="pageUpdate"></PageSelector>
+            <PageSelector :page="data.curPage" :pageSize="PageSize" :total="data.totalSize" @pageUpdate="pageUpdate"></PageSelector>
         </div>
     </div>
 

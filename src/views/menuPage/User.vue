@@ -135,9 +135,9 @@ let searchByNameOrTypeOrPlace = async () => {
 
 let pageUpdate = (pageNum:number) => {
     data.curPage = pageNum
-    if(data.curPage == 0){
+    if(data.pageStatus == 0){
         load()
-    }else if(data.curPage == 1){
+    }else if(data.pageStatus == 1){
         data.tableData = []
         data.tableData.push(...data.tempSearchData.slice((data.curPage - 1)*PageSize,data.curPage*PageSize))
     }

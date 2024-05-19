@@ -27,14 +27,14 @@ export default defineConfig({
     hmr: true,
     proxy: {
       '/admin': {
-        target: 'http://172.18.30.23',
+        target: 'http://172.18.30.12',
         changeOrigin: true,
 
         //路径重写不能要，因为api文档里需要带路径
         // rewrite: (path) => path.replace(/^\/api/, ''),
       },
       '/api': {
-        target: 'http://172.18.30.23',
+        target: 'http://172.18.30.12',
         changeOrigin: true,
 
         //路径重写不能要，因为api文档里需要带路径

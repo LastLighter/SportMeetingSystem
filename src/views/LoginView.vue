@@ -10,7 +10,7 @@ import router from '@/router';
 //用于在登录和注册之间切换，0表示登录，1表示注册,2表示重置密码
 let status = ref<number>(0)
 
-let title = ref<string>('用户登录')
+let title = ref<string>('管理员登录')
 let nickName = ref<string>('')
 let ps = ref<string>('')
 
@@ -84,7 +84,7 @@ let login = async () => {
     position: absolute;
     left: 40vw;
     top: 200px;
-    background-color: #B97A57;
+    background-color: #99D9EA;
     width: 500px;
     height: 420px;
     display: flex;

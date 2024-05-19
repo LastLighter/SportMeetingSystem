@@ -30,6 +30,7 @@ let data: {
         phone: '',
         username: '',
         password: '',
+        avatar:null,
     },
     notiIcon: '',
     notiTitle: '',
@@ -65,8 +66,9 @@ let handleAdd = () => {
         phone: '',
         username: '',
         password: '',
-    },
-        data.notiTitle = '新增管理员'
+        avatar:null,
+    }
+    data.notiTitle = '新增管理员'
     data.notiIcon = addIcon
     data.notiState = 0
     data.psRequired = true
